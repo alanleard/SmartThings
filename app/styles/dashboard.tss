@@ -1,0 +1,40 @@
+"Window": {
+    backgroundColor: "#ffffff",
+    barColor:"#000000"
+},
+"Label": {
+    top:50,
+    width: Ti.UI.SIZE,
+    height: Ti.UI.SIZE,
+    color: "#000",
+    font: {
+        fontSize: 20,
+        fontFamily: 'Helvetica Neue'
+    },
+    textAlign: 'center'
+},
+"#users":{
+    top:0,
+    height:120,
+    headerTitle:"Users",
+    width:"50%",
+    left:0
+},
+"#hubs":{
+    top:0,
+    height:120,
+    headerTitle:"Hubs",
+    width:"50%",
+    right:0
+},
+"#devices":{
+    top:155,
+    bottom:0,
+    headerTitle:"Devices",
+    filterAtribute:"title"
+},
+"#deviceSearch":{
+    height:Ti.UI.SIZE,
+    top:115
+}
+

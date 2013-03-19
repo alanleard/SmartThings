@@ -1,0 +1,15 @@
+<Alloy>
+	<Collection src="users" />
+	<Collection src="hubs" />
+	<Window id="dashboard" title="SmartThings">
+		<TableView id="hubs" onClick="updateHub"/>
+			<!-- <TableViewRow title="{name}"/>
+		</TableView> -->
+		<TableView id="users" dataCollection="users" onClick="setUser">
+			<TableViewRow title="{fullName}" user_id="{id}" fullName="{fullname}" name="{name}" locked="{locked}" permissions="{permissions}"/>
+		</TableView>
+		<TableView id="devices" onClick="showDevice"/>
+	    <SearchBar id="deviceSearch"/>
+		
+	</Window>
+</Alloy>
