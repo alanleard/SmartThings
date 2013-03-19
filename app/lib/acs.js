@@ -50,10 +50,6 @@ module.exports = {
                     message:e.data.alert
                 });
                 alertDialog.show();   
-                
-                // if(e.data.camera){
-                    // Ti.Media.showCamera();
-                // }
             }});
     
     }
