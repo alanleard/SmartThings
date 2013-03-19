@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.2
+apiversion: 2
+description: This module holds methods pertaining to security services
+author: Virtusa Corporation 2012
+license: Specify your license
+copyright: 2012 McDonald's Corporation. All Rights Reserved
+
+
+# these should not be edited
+name: sessionmgmt
+moduleid: mcdonalds.module.android.sessionmgmt
+guid: 8a0a72a4-6eba-497c-a694-57b0624570bb
+platform: android
+minsdk: 2.0.1.GA2

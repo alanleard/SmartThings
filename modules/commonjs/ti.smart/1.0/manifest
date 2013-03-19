@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0
+description: SmartThings API Module
+author: Appcelerator
+license: Appcelerator Commercial License
+copyright: Copyright (c) 2011-2012 by Appcelerator,  Inc.
+
+
+# these should not be edited
+name: ti.smart
+moduleid: ti.smart
+guid: 1056b5d2-2bb5-4339-b930-297637aeec4f
+platform: commonjs
+minsdk: 2.1.0

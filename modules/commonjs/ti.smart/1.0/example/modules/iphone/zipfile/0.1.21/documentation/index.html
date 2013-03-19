@@ -1,0 +1,90 @@
+<h1>zipfile Module</h1>
+
+<h2>Description</h2>
+
+<p>Titanium module to create and extract Zip files</p>
+
+<h2>Accessing the zipfile Module</h2>
+
+<p>To access this module from JavaScript, you would do the following:</p>
+
+<pre><code>var zipfile = require("zipfile");
+</code></pre>
+
+<p>The zipfile variable is a reference to the Module object.   </p>
+
+<h2>Reference</h2>
+
+<h1>Credits</h1>
+
+<p>Based on ZipArchive: http://code.google.com/p/ziparchive/ </p>
+
+<h1>Build</h1>
+
+<p>Just run ./build.py</p>
+
+<h1>Install</h1>
+
+<p>1.Download or build from source zipfile module.
+2.Place zipfile-iphone-x.y.z.zip file to /Library/Application Support/Titanium and unzip it.</p>
+
+<h1>How to use</h1>
+
+<p>1.Register the zipfile module with your application by editing 'tiapp.xml' and adding the module:</p>
+
+<p><modules>
+    <module version="0.1.19">zipfile</module>
+</modules></p>
+
+<ol>
+<li><p>var zipfile = require("zipfile");
+zipfile.extract(path<em>to</em>zip<em>file, dir</em>to_extract)</p></li>
+</ol>
+
+<h1>Example</h1>
+
+<pre><code>//app.js: download zip from DropBox to Documents folder and extact file to Documents folder
+
+Titanium.UI.setBackgroundColor('#000');
+
+var win1 = Titanium.UI.createWindow({  
+    title:'ZipFile test',
+    backgroundColor:'#fff'
+});
+
+win1.open();
+var xhr = Titanium.Network.createHTTPClient();
+
+xhr.onload = function()
+{
+    var f = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory,'test.zip');
+    f.write(this.responseData);
+    Ti.API.log('INFO',Ti.Filesystem.applicationDataDirectory);
+    Ti.ZipFile.extract(Ti.Filesystem.applicationDataDirectory+'/test.zip', Ti.Filesystem.applicationDataDirectory);
+};
+xhr.open('GET','http://dl.dropbox.com/u/1400234/test.zip');
+xhr.send();
+</code></pre>
+
+<h1>Creation Example</h1>
+
+<pre><code>    var zip = zipfile.create("/path/to/zip/as/string.zip");
+    zip.addFile("/path/to/file/to/add/filename", "path/in/zip/filename");
+    zip.close();
+</code></pre>
+
+<h2>Author</h2>
+
+<p>Based on ZipArchive: http://code.google.com/p/ziparchive/ </p>
+
+<p>Created by Gennadiy Potapov
+http://generalarcade.com
+Source : https://github.com/TermiT/ZipFile</p>
+
+<p>Updated to Ti SDK 1.7.0 and deprecated fixes of minizip code by Kosso
+http://kosso.co.uk
+Forked Source : https://github.com/kosso/ZipFile</p>
+
+<h2>License</h2>
+
+<p>MIT License</p>

@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1
+apiversion: 2
+description: My module
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2012 by Your Company
+
+
+# these should not be edited
+name: screen
+moduleid: mcdonalds.module.android.screen
+guid: 8e7509ae-6ac8-491a-98fc-f4f430cc4a73
+platform: android
+minsdk: 2.0.1.GA2

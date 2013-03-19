@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1
+description: My module
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2011 by Your Company
+
+
+# these should not be edited
+name: encryption
+moduleid: mcdonalds.module.ios.encryption
+guid: 2d159999-d37d-4e35-81a4-78a10de3e0e9
+platform: iphone
+minsdk: 1.7.5

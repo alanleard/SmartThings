@@ -1,0 +1,3 @@
+mcd.test.db.testExecuteSql(mcd.properties.db.executeSql.databaseName, mcd.properties.db.executeSql.sqlQueryList, mcd.properties.db.executeSql.paramsList, mcd.properties.db.executeSql.evt, mcd.properties.db.executeSql.expectedOutput1, mcd.properties.db.executeSql.expectedOutput2, 0);
+mcd.test.db.testExecuteSqlWithReturn(mcd.properties.db.executeSqlWithReturn.databaseName, mcd.properties.db.executeSqlWithReturn.sqlQuery, mcd.properties.db.executeSqlWithReturn.params, mcd.properties.db.executeSqlWithReturn.expectedOutput, 0);
+mcd.test.db.testDeleteDB(mcd.properties.db.deleteDB.databaseName, mcd.properties.db.deleteDB.evt, mcd.properties.db.deleteDB.expectedOutput, 0); 
