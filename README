@@ -1,18 +1,9 @@
-Welcome to your Appcelerator Titanium Mobile Project
+This is an example application for accessing the SmartThings platform (http://smartthings.com).  
 
-This is a blank project.  Start by editing your application's app.js to 
-make your first mobile project using Titanium.
+This is a standard Titanium application build with the Alloy framework.  
 
+It uses the ti.smart module to access the set of SmartThings REST API's.  
 
+Source for the ti.smart module can be found here: https://github.com/alanleard/ti.smart
 
-----------------------------------
-Stuff our legal folk make us say:
-
-Appcelerator, Appcelerator Titanium and associated marks and logos are 
-trademarks of Appcelerator, Inc. 
-
-Titanium is Copyright (c) 2008-2012 by Appcelerator, Inc. All Rights Reserved.
-
-Titanium is licensed under the Apache Public License (Version 2). Please
-see the LICENSE file for the full license.
-
+Documentation for the SmartThings Platform can be found here: https://docs.google.com/a/222wine.com/document/d/1dAoqlmv2EVcbrZsjKV2ksMxNpjV5GNLxzqN6lBxi_UE
