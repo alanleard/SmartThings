@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <property name="acs-oauth-secret-production" type="string">HYFDRdQs5ycsjqvE2jIjqhEMI9wyVCqv</property>
-    <property name="acs-oauth-key-production" type="string">ibxDpGv3fplO51BFOaUbwhJZxyk8VnHR</property>
-    <property name="acs-api-key-production" type="string">XQQyga5T3jie6mi5Em8rgO5IIRvBShBo</property>
-    <property name="acs-oauth-secret-development" type="string">cUL91jOpnSQRFQCriGxEJ1MbLIlM65oa</property>
-    <property name="acs-oauth-key-development" type="string">hNLMELQxeYhHK7bQ4ivdmfI2KJnIpfOD</property>
     <property name="acs-api-key-development" type="string">SCpscJDHiAoRB37NIXNnNmrgavB5F7io</property>
     <id>com.smartthings.app</id>
     <name>SmartThings</name>
