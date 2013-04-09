@@ -127,6 +127,8 @@ function Controller() {
     $.__views.dashboard = Ti.UI.createWindow({
         backgroundColor: "#ffffff",
         barColor: "#000000",
+        navBarHidden: !0,
+        tabBarHidden: !0,
         id: "dashboard",
         title: "SmartThings"
     });

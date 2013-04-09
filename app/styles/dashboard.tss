@@ -1,6 +1,8 @@
 "Window": {
     backgroundColor: "#ffffff",
-    barColor:"#000000"
+    barColor:"#000000",
+    navBarHidden:true,
+    tabBarHidden:true
 },
 "Label": {
     top:50,

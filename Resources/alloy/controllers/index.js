@@ -3,6 +3,7 @@ function Controller() {
     $model = arguments[0] ? arguments[0].$model : null;
     var $ = this, exports = {}, __defers = {};
     $.__views.index = Ti.UI.createTabGroup({
+        navBarHidden: "true",
         id: "index"
     });
     $.__views.__alloyId9 = Alloy.createController("dashboard", {
@@ -12,7 +13,7 @@ function Controller() {
         window: $.__views.__alloyId9.getViewEx({
             recurse: !0
         }),
-        title: "Dashboard",
+        title: "SmartThings",
         icon: "KS_nav_ui.png",
         id: "__alloyId8"
     });
@@ -20,7 +21,9 @@ function Controller() {
     $.__views.__alloyId13 = Ti.UI.createWindow({
         backgroundColor: "#ffffff",
         barColor: "#000000",
-        title: "Tab 2",
+        navBarHidden: !0,
+        tabBarHidden: !0,
+        title: "SmartApps",
         id: "__alloyId13"
     });
     $.__views.__alloyId14 = Ti.UI.createLabel({
@@ -33,13 +36,13 @@ function Controller() {
             fontFamily: "Helvetica Neue"
         },
         textAlign: "center",
-        text: "I am Window 2",
+        text: "Placeholder for SmartApps...",
         id: "__alloyId14"
     });
     $.__views.__alloyId13.add($.__views.__alloyId14);
     $.__views.__alloyId12 = Ti.UI.createTab({
         window: $.__views.__alloyId13,
-        title: "Tab 2",
+        title: "SmartApps",
         icon: "KS_nav_views.png",
         id: "__alloyId12"
     });

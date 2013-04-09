@@ -1,11 +1,11 @@
 <Alloy>
-	<TabGroup>
-		<Tab title="Dashboard" icon="KS_nav_ui.png">
+	<TabGroup navBarHidden="true">
+		<Tab title="SmartThings" icon="KS_nav_ui.png">
 			<Require src="dashboard"/>
 		</Tab>
-		<Tab title="Tab 2" icon="KS_nav_views.png">
-			<Window title="Tab 2">
-				<Label>I am Window 2</Label>
+		<Tab title="SmartApps" icon="KS_nav_views.png">
+			<Window title="SmartApps">
+				<Label>Placeholder for SmartApps...</Label>
 			</Window>
 		</Tab>
 	</TabGroup>
