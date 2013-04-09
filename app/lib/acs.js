@@ -25,32 +25,34 @@ module.exports = {
 
     },
     getDeviceToken: function(callback){
-        Ti.API.info("REGISTERING LOCAL PUSH");
-        Titanium.Network.registerForPushNotifications({
-            types: [
-                Titanium.Network.NOTIFICATION_TYPE_BADGE,
-                Titanium.Network.NOTIFICATION_TYPE_ALERT,
-                Titanium.Network.NOTIFICATION_TYPE_SOUND
-            ],
-            success:function(e)
-            {
-                Ti.App.Properties.setString("device_token",e.deviceToken);
-                callback(e.deviceToken);
-            },
-            error:function(e)
-            {
-                alert("Error during registration: "+e.error);
-            },
-            callback:function(e)
-            {
-            // called when a push notification is received.
-                //alert("Received a push notification\n\nPayload:\n\n"+JSON.stringify(e.data));
-                var alertDialog = Ti.UI.createAlertDialog({
-                    title:"SmartThings Notification",
-                    message:e.data.alert
-                });
-                alertDialog.show();   
-            }});
+        if(Ti.Platform.osname != "android"){
+            Ti.API.info("REGISTERING LOCAL PUSH");
+            Titanium.Network.registerForPushNotifications({
+                types: [
+                    Titanium.Network.NOTIFICATION_TYPE_BADGE,
+                    Titanium.Network.NOTIFICATION_TYPE_ALERT,
+                    Titanium.Network.NOTIFICATION_TYPE_SOUND
+                ],
+                success:function(e)
+                {
+                    Ti.App.Properties.setString("device_token",e.deviceToken);
+                    callback(e.deviceToken);
+                },
+                error:function(e)
+                {
+                    alert("Error during registration: "+e.error);
+                },
+                callback:function(e)
+                {
+                // called when a push notification is received.
+                    //alert("Received a push notification\n\nPayload:\n\n"+JSON.stringify(e.data));
+                    var alertDialog = Ti.UI.createAlertDialog({
+                        title:"SmartThings Notification",
+                        message:e.data.alert
+                    });
+                    alertDialog.show();   
+                }});
+        }
     
     }
 }

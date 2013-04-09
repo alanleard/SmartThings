@@ -10,6 +10,7 @@ function Controller() {
         var rows = [];
         for (i in data) {
             var row = Ti.UI.createTableViewRow({
+                color: "#000000",
                 title: data[i].label ? "(" + data[i].label + ") " + data[i].name : data[i].name,
                 states: data[i].currentStates,
                 stateOverrides: data[i].stateOverrides,
@@ -79,6 +80,7 @@ function Controller() {
                 var rows = [];
                 for (i in data) {
                     var row = Ti.UI.createTableViewRow({
+                        color: "#000000",
                         title: data[i].name,
                         hubID: data[i].id,
                         locationID: data[i].locationId
@@ -148,25 +150,26 @@ function Controller() {
         id: "users"
     });
     $.__views.dashboard.add($.__views.users);
-    var __alloyId7 = function(e) {
+    var __alloyId6 = function(e) {
         var models = Alloy.Collections.users.models, len = models.length, rows = [];
         for (var i = 0; i < len; i++) {
-            var __alloyId5 = models[i];
-            __alloyId5.__transform = {};
-            var __alloyId6 = Ti.UI.createTableViewRow({
-                title: typeof __alloyId5.__transform.fullName != "undefined" ? __alloyId5.__transform.fullName : __alloyId5.get("fullName"),
-                user_id: typeof __alloyId5.__transform.id != "undefined" ? __alloyId5.__transform.id : __alloyId5.get("id"),
-                fullName: typeof __alloyId5.__transform.fullname != "undefined" ? __alloyId5.__transform.fullname : __alloyId5.get("fullname"),
-                name: typeof __alloyId5.__transform.name != "undefined" ? __alloyId5.__transform.name : __alloyId5.get("name"),
-                locked: typeof __alloyId5.__transform.locked != "undefined" ? __alloyId5.__transform.locked : __alloyId5.get("locked"),
-                permissions: typeof __alloyId5.__transform.permissions != "undefined" ? __alloyId5.__transform.permissions : __alloyId5.get("permissions"),
-                id: "__alloyId4"
+            var __alloyId4 = models[i];
+            __alloyId4.__transform = {};
+            var __alloyId5 = Ti.UI.createTableViewRow({
+                color: "#000000",
+                id: "tableRow",
+                title: typeof __alloyId4.__transform.fullName != "undefined" ? __alloyId4.__transform.fullName : __alloyId4.get("fullName"),
+                user_id: typeof __alloyId4.__transform.id != "undefined" ? __alloyId4.__transform.id : __alloyId4.get("id"),
+                fullName: typeof __alloyId4.__transform.fullname != "undefined" ? __alloyId4.__transform.fullname : __alloyId4.get("fullname"),
+                name: typeof __alloyId4.__transform.name != "undefined" ? __alloyId4.__transform.name : __alloyId4.get("name"),
+                locked: typeof __alloyId4.__transform.locked != "undefined" ? __alloyId4.__transform.locked : __alloyId4.get("locked"),
+                permissions: typeof __alloyId4.__transform.permissions != "undefined" ? __alloyId4.__transform.permissions : __alloyId4.get("permissions")
             });
-            rows.push(__alloyId6);
+            rows.push(__alloyId5);
         }
         $.__views.users.setData(rows);
     };
-    Alloy.Collections.users.on("fetch destroy change add remove reset", __alloyId7);
+    Alloy.Collections.users.on("fetch destroy change add remove reset", __alloyId6);
     setUser ? $.__views.users.addEventListener("click", setUser) : __defers["$.__views.users!click!setUser"] = !0;
     $.__views.devices = Ti.UI.createTableView({
         top: 155,
@@ -184,7 +187,7 @@ function Controller() {
     });
     $.__views.dashboard.add($.__views.deviceSearch);
     exports.destroy = function() {
-        Alloy.Collections.users.off("fetch destroy change add remove reset", __alloyId7);
+        Alloy.Collections.users.off("fetch destroy change add remove reset", __alloyId6);
     };
     _.extend($, $.__views);
     var smart = require("ti.smart");

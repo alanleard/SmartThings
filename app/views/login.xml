@@ -1,8 +1,8 @@
 <Alloy>
-	<View class="container">
+	<ScrollView class="container">
 		<ImageView id="logo"/>
 		<TextField id="username" class="text"/>
 		<TextField id="password" class="text" onReturn="login" />
 		<Label id="submit" class="button" onTouchstart="login"/>
-	</View>
+	</ScrollView>
 </Alloy>

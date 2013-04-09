@@ -20,24 +20,5 @@ module.exports = {
             Ti.API.info("ACS Subscribe: " + JSON.stringify(e));
         });
     },
-    getDeviceToken: function(callback) {
-        Ti.API.info("REGISTERING LOCAL PUSH");
-        Titanium.Network.registerForPushNotifications({
-            types: [ Titanium.Network.NOTIFICATION_TYPE_BADGE, Titanium.Network.NOTIFICATION_TYPE_ALERT, Titanium.Network.NOTIFICATION_TYPE_SOUND ],
-            success: function(e) {
-                Ti.App.Properties.setString("device_token", e.deviceToken);
-                callback(e.deviceToken);
-            },
-            error: function(e) {
-                alert("Error during registration: " + e.error);
-            },
-            callback: function(e) {
-                var alertDialog = Ti.UI.createAlertDialog({
-                    title: "SmartThings Notification",
-                    message: e.data.alert
-                });
-                alertDialog.show();
-            }
-        });
-    }
+    getDeviceToken: function(callback) {}
 };

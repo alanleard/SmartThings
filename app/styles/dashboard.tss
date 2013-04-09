@@ -36,5 +36,7 @@
 "#deviceSearch":{
     height:Ti.UI.SIZE,
     top:115
+},
+"#tableRow":{
+    color:"#000000"
 }
-

@@ -6,7 +6,7 @@
 			<!-- <TableViewRow title="{name}"/>
 		</TableView> -->
 		<TableView id="users" dataCollection="users" onClick="setUser">
-			<TableViewRow title="{fullName}" user_id="{id}" fullName="{fullname}" name="{name}" locked="{locked}" permissions="{permissions}"/>
+			<TableViewRow id="tableRow" title="{fullName}" user_id="{id}" fullName="{fullname}" name="{name}" locked="{locked}" permissions="{permissions}"/>
 		</TableView>
 		<TableView id="devices" onClick="showDevice"/>
 	    <SearchBar id="deviceSearch"/>

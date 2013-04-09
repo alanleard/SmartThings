@@ -37,7 +37,7 @@ function Controller() {
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     $model = arguments[0] ? arguments[0].$model : null;
     var $ = this, exports = {}, __defers = {};
-    $.__views.login = Ti.UI.createView({
+    $.__views.login = Ti.UI.createScrollView({
         backgroundColor: "white",
         layout: "vertical",
         top: 10,
@@ -55,7 +55,7 @@ function Controller() {
     $.__views.username = Ti.UI.createTextField({
         top: 30,
         width: 280,
-        height: 40,
+        height: 60,
         borderWidth: 1,
         borderColor: "#707070",
         paddingRight: 10,
@@ -67,7 +67,7 @@ function Controller() {
     $.__views.password = Ti.UI.createTextField({
         top: 30,
         width: 280,
-        height: 40,
+        height: 60,
         borderWidth: 1,
         borderColor: "#707070",
         paddingRight: 10,

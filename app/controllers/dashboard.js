@@ -24,6 +24,7 @@ function populateDeviceTable(data){
     var rows = [];
     for(i in data){
         var row = Ti.UI.createTableViewRow({
+            color:"#000000",
             title:data[i].label?"("+data[i].label+") "+data[i].name:data[i].name,
                 states:data[i].currentStates,
                 stateOverrides:data[i].stateOverrides,
@@ -118,6 +119,7 @@ function getHubs(callback){
             var rows = [];
             for(i in data){
                 var row = Ti.UI.createTableViewRow({
+                    color:"#000000",
                     title:data[i].name,
                     hubID:data[i].id,
                     locationID:data[i].locationId
